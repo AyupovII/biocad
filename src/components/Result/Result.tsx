@@ -4,6 +4,17 @@ interface ResultProps {
   first: string;
   second: string;
 }
+
+const CHUNK_SIZE = 30; // сколько символов в строке, можно адаптировать по ширине окна
+
+function chunk<T>(arr: T[], size: number): T[][] {
+  const result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+}
+
 const Result: React.FC<ResultProps> = ({ first, second }) => {
   // const aminoAcidColors: Record<string, string> = {
   //   C: '#FFEA00',                                                                 // Цистеин
@@ -50,20 +61,20 @@ const Result: React.FC<ResultProps> = ({ first, second }) => {
   }
   return (
     <div className={style.result}>
-      <div className={style.line}>{
+      <span className={style.line}>{
         first.split('').map((aminoAcid, index) => (
-          <span key={index} className={style.aminoAcid} style={{ backgroundColor: AminoAcidColor[aminoAcid as keyof typeof AminoAcidColor] }}>
+          <span className={style.aminoAcid} key={index} style={{ backgroundColor: AminoAcidColor[aminoAcid as keyof typeof AminoAcidColor] }}>
             {aminoAcid}
           </span>
         ))
-      }</div>
-      <div className={style.line}>{
+      }</span>
+      <span className={style.line}>{
         second.split('').map((aminoAcid, index) => (
-          <span key={index} className={style.aminoAcid} style={{ backgroundColor: first[index] !== second[index] ? AminoAcidColor[aminoAcid as keyof typeof AminoAcidColor] : "unset" }}>
+          <span className={style.aminoAcid} key={index} style={{ backgroundColor: first[index] !== second[index] ? AminoAcidColor[aminoAcid as keyof typeof AminoAcidColor] : "unset" }}>
             {aminoAcid}
           </span>
         ))
-      }</div>
+      }</span>
     </div>
   )
 }
