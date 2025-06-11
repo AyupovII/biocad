@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/biocad/static/css/main.cb7bc638.css",
+    "main.js": "/biocad/static/js/main.debb9582.js",
+    "static/js/453.c87bcb2b.chunk.js": "/biocad/static/js/453.c87bcb2b.chunk.js",
+    "index.html": "/biocad/index.html",
+    "main.cb7bc638.css.map": "/biocad/static/css/main.cb7bc638.css.map",
+    "main.debb9582.js.map": "/biocad/static/js/main.debb9582.js.map",
+    "453.c87bcb2b.chunk.js.map": "/biocad/static/js/453.c87bcb2b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb7bc638.css",
+    "static/js/main.debb9582.js"
+  ]
+}
