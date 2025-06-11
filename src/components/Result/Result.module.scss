@@ -1,0 +1,13 @@
+.result{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.line{
+  display: flex;
+  flex-wrap: wrap;
+}
+.aminoAcid{
+  width: 12pt;
+  text-align: center;
+}
