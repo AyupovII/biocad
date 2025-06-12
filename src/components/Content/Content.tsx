@@ -7,7 +7,10 @@ import Result from '../Result/Result';
 const allowedPattern = /^[ARNDCEQGHILKMFPSTWYV-]*$/;
 
 const Content: React.FC = () => {
-  const [value, setValue] = useState({ first: "", second: "" });
+  const [value, setValue] = useState({
+    first: "VLSPADKTNIKASWEKIGSHGGEYGAEALERTFLCFPTTKTYFPHFDLSHGSAQVKAHGKKVADALTNAVGHLDDLPGALSALSDLHAYKLRVDPVNFKLLSHCLLVTLASHHPAEFT",
+    second: ""
+  });
   const [textError, setTextError] = useState<string | null>(null);
   const [isValid, setIsValid] = useState(false);
   const handleChange = (type: string, event: React.ChangeEvent<HTMLInputElement>) => {
